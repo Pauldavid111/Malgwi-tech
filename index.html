@@ -6,85 +6,110 @@
 <title>Malgwi Tech | Paul David - Web, Design & Data</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#FFFEFA;color:#3E2F22;line-height:1.7}
+body{background:#FFFEFA;color:#3E2F22;line-height:1.65}
 a{text-decoration:none;color:#8B5E00}
 .container{max-width:1100px;margin:auto;padding:20px}
-/* HEADER */
-header{background:#FFFDF5;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;box-shadow:0 2px 15px rgba(0,0,0,0.06);z-index:100}
-.logo-area{display:flex;align-items:center;gap:12px}
-.logo-box{width:55px;height:55px;background:#FFF3D6;border:2px dashed #C9A227;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center;font-size:11px;color:#8B5E00;font-weight:bold}
+/* HEADER - BALANCED */
+header{background:#FFFDF5;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;box-shadow:0 1px 10px rgba(0,0,0,0.06);z-index:100;flex-wrap:nowrap;gap:8px}
+.logo-area{display:flex;align-items:center;gap:9px;flex:1;min-width:0}
+.logo-box{width:42px;height:42px;min-width:42px;background:#FFF3D6;border:1.5px dashed #C9A227;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center;font-size:8px;color:#8B5E00;font-weight:bold;cursor:pointer;line-height:1.2}
 .logo-box img{width:100%;height:100%;object-fit:cover}
-.logo-text h1{font-size:22px;color:#2E1F0E;line-height:1}
-.logo-text span{font-size:13px;color:#8B5E00}
-nav a{margin-left:18px;font-weight:600;color:#3E2F22;font-size:15px}
-.btn{display:inline-block;background:#C9A227;color:#fff;padding:12px 24px;border-radius:30px;font-weight:bold;margin:5px}
+.logo-text{white-space:nowrap;overflow:hidden}
+.logo-text h1{font-size:17px;color:#2E1F0E;line-height:1;letter-spacing:0.3px}
+.logo-text span{font-size:11px;color:#8B5E00}
+.header-right{display:flex;align-items:center;gap:7px;flex-shrink:0}
+nav{display:flex;flex-wrap:wrap;gap:18px}
+nav a{font-weight:600;color:#3E2F22;font-size:15px}
+.btn{display:inline-block;background:#C9A227;color:#fff;padding:11px 22px;border-radius:30px;font-weight:600;font-size:15px;margin:5px;text-align:center}
 .btn-light{background:#fff;color:#3E2F22;border:1.5px solid #E8D9B0}
-section{padding:60px 20px}
+.btn-small{padding:7px 13px;font-size:12px;margin:0;border-radius:20px;white-space:nowrap}
+.menu-btn{display:none;background:#C9A227;color:#fff;border:none;padding:7px 12px;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap}
+section{padding:50px 20px}
 h2{font-size:30px;color:#2E1F0E;margin-bottom:12px}
 h2 span{color:#C9A227}
-.card{background:#FFF8E7;padding:25px;border-radius:16px;margin:15px 0;border:1px solid #F0E2C0}
+.card{background:#FFF8E7;padding:22px;border-radius:14px;margin:15px 0;border:1px solid #F0E2C0}
 .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.profile-img{width:100%;height:340px;object-fit:cover;border-radius:18px;background:#FFF3D6;display:flex;align-items:center;justify-content:center;border:2px dashed #C9A227;color:#8B5E00;text-align:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.profile-img{width:100%;height:340px;object-fit:cover;border-radius:16px;background:#FFF3D6;display:flex;align-items:center;justify-content:center;border:2px dashed #C9A227;color:#8B5E00;text-align:center}
 .work-img{width:100%;height:220px;object-fit:cover;border-radius:12px;background:#FFF3D6;display:flex;align-items:center;justify-content:center;border:2px dashed #E8D9B0;color:#8B5E00}
 .tag{display:inline-block;background:#fff;padding:6px 12px;border-radius:20px;font-size:13px;margin:3px;border:1px solid #F0E2C0}
-input,textarea,select{width:100%;padding:13px;margin:8px 0;border-radius:10px;border:1.5px solid #E8D9B0;background:#FFFEFA;outline:none}
+input,textarea,select{width:100%;padding:12px;margin:8px 0;border-radius:10px;border:1.5px solid #E8D9B0;background:#FFFEFA;outline:none;font-size:15px}
 button{cursor:pointer}
-footer{background:#FFF6E0;text-align:center;padding:40px 20px;margin-top:20px}
-@media(max-width:750px){.grid,.grid2{grid-template-columns:1fr} nav{display:none} header{flex-wrap:wrap}}
+footer{background:#FFF6E0;text-align:center;padding:35px 20px;margin-top:20px}
+.whatsapp-float{position:fixed;bottom:16px;right:16px;background:#25D366;color:#fff;padding:10px 14px;border-radius:50px;font-weight:600;box-shadow:0 3px 12px rgba(0,0,0,0.18);z-index:999;font-size:13px}
+.hero-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.hero-buttons .btn{margin:0;min-width:150px}
+/* LAPTOP */
+@media(min-width:751px){.hero-title{font-size:40px}}
+/* PHONE - BALANCED HEADER FIX */
+@media(max-width:750px){
+.grid,.grid2{grid-template-columns:1fr}
+header{flex-wrap:wrap}
+.menu-btn{display:block}
+nav{display:none;width:100%;flex-direction:column;background:#FFF8E7;padding:8px;border-radius:10px;text-align:center;gap:0;order:3}
+nav.show{display:flex}
+nav a{padding:11px;border-bottom:1px solid #F0E2C0;display:block}
+.logo-text h1{font-size:16px}
+h2{font-size:25px;text-align:center}
+section{padding:35px 15px}
+.profile-img{height:280px}
+.hero-title{font-size:27px !important;line-height:1.35}
+.hero-buttons{flex-direction:column;align-items:center}
+.hero-buttons .btn{width:100%;max-width:240px;padding:10px 18px;font-size:14px}
+.card .btn{width:100%}
+.whatsapp-float{bottom:12px;right:12px}
+}
 </style>
 </head>
 <body>
 
-<!-- HEADER WITH LOGO SPACE -->
 <header>
 <div class="logo-area">
-<img src="logo.jpg" alt="Malgwi Tech Logo" style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+<img src="logo.jpg" class="logo-box" id="logoBox" style="width:50px;height:50px;object-fit:cover;border-radius:12px;">
 <div class="logo-text"><h1>MALGWI TECH</h1><span>Web • Design • Data</span></div>
 </div>
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#work">My Work</a>
-<a href="#contact">Contact</a>
+<div class="header-right">
+<a href="#contact" class="btn btn-small">Contact</a>
+<button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+</div>
+<nav id="mainNav">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#services" onclick="closeMenu()">Services</a>
+<a href="#work" onclick="closeMenu()">My Work</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
 </nav>
-<a href="#contact" class="btn">Contact me</a>
 </header>
 
-<!-- HOME -->
 <section id="home" style="text-align:center;background:#FFFEF8">
 <div class="container">
-<h2 style="font-size:38px">I Build Websites, Design Brands <span>& Analyze Data</span> That Grow Businesses.</h2>
-<p style="max-width:700px;margin:15px auto">Hi, I'm <b>Paul David</b> - CEO of <b>Malgwi Tech</b>. A self-taught Web Developer, Graphic Designer & Data Analyst. I help businesses look professional, work smarter and grow faster.</p>
+<h2 class="hero-title">I Build Websites, Design Brands <span>& Analyze Data</span> That Grow Businesses.</h2>
+<p style="max-width:680px;margin:14px auto;font-size:16px">Hi, I'm <b>Paul David</b> - CEO of <b>Malgwi Tech</b>. A self-taught Web Developer, Graphic Designer & Data Analyst. I help businesses look professional, work smarter and grow faster.</p>
+<div class="hero-buttons">
 <a href="#work" class="btn">View My Work</a>
 <a href="https://wa.me/2348039696838" class="btn btn-light">WhatsApp Me</a>
-<p style="margin-top:15px;font-size:14px">📍 Nigeria | Working Worldwide (Remote)</p>
+</div>
+<p style="margin-top:16px;font-size:13px;color:#8B5E00">📍 Nigeria | Working Worldwide (Remote)</p>
 </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 <div class="container grid2">
 <div>
-<!-- YOUR PICTURE HERE -->
 <img src="your-picture.jpg" class="profile-img" alt="Paul David - CEO Malgwi Tech" onerror="this.style.display='none'">
-<p style="font-size:13px;text-align:center;margin-top:8px"> <b></b> CEO PAUL DAVID</p>
+<p style="font-size:13px;text-align:center;margin-top:8px"> <b>CEO-PAUL DAVID</b> </p>
+
 </div>
 <div>
 <h2>About <span>Me</span></h2>
 <p>I am <b>Paul David</b>, founder & CEO of Malgwi Tech. I started with just a phone and a strong desire to learn.</p><br>
 <p>Today, I build modern websites, design logos & flyers that sell, and turn raw data into clear decisions.</p><br>
-<p><b>Company:</b> Malgwi Tech<br>
-<b>CEO:</b> Paul David<br>
-<b>Location:</b> Nigeria - Working Worldwide<br>
-<b>Focus:</b> Clarity, Creativity & Results</p><br>
+<p><b>Company:</b> Malgwi Tech<br><b>CEO:</b> Paul David<br><b>Location:</b> Nigeria - Working Worldwide<br><b>Focus:</b> Clarity, Creativity & Results</p><br>
 <a href="#contact" class="btn">Let's Work Together</a>
 </div>
 </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" style="background:#FFFDF5">
 <div class="container">
 <h2 style="text-align:center">My <span>Services</span></h2>
@@ -96,26 +121,22 @@ footer{background:#FFF6E0;text-align:center;padding:40px 20px;margin-top:20px}
 </div>
 </section>
 
-<!-- MY WORK / PORTFOLIO -->
 <section id="work">
 <div class="container">
 <h2 style="text-align:center">My <span>Work</span></h2>
-<p style="text-align:center"> Take a look at the works.</p><br>
-
+<p style="text-align:center">Take a look at my works.</p><br>
 <h3>Web Development</h3>
 <div class="grid">
 <div class="card"><img src="web1.jpg" class="work-img" alt="Web Project 1"><h3>Business Portfolio Website</h3><p>Responsive website for a small business.</p><p><b>Tools:</b> HTML, CSS, JavaScript</p></div>
 <div class="card"><img src="web2.jpg" class="work-img" alt="Web Project 2"><h3>Landing Page for a Brand</h3><p>Clean landing page with clear call-to-action.</p><p><b>Tools:</b> HTML, CSS</p></div>
 <div class="card"><img src="web3.jpg" class="work-img" alt="Web Project 3"><h3>Personal Portfolio</h3><p>Portfolio to showcase all services in one place.</p><p><b>Tools:</b> HTML, CSS, JavaScript</p></div>
 </div>
-
 <h3>Graphic Design</h3>
 <div class="grid">
 <div class="card"><img src="design1.jpg" class="work-img" alt="Design 1"><h3>Logo Design</h3><p>Modern logo for a startup brand.</p></div>
 <div class="card"><img src="design2.jpg" class="work-img" alt="Design 2"><h3>Event Flyer</h3><p>Eye-catching flyer for event promotion.</p></div>
 <div class="card"><img src="design3.jpg" class="work-img" alt="Design 3"><h3>Social Media Brand Kit</h3><p>Matching posts & banner for consistent branding.</p></div>
 </div>
-
 <h3>Data Analysis</h3>
 <div class="grid">
 <div class="card"><img src="data1.jpg" class="work-img" alt="Data 1"><h3>Sales Dashboard</h3><p>Monthly sales trends in a simple dashboard.</p></div>
@@ -125,7 +146,6 @@ footer{background:#FFF6E0;text-align:center;padding:40px 20px;margin-top:20px}
 </div>
 </section>
 
-<!-- SKILLS -->
 <section style="background:#FFFDF5">
 <div class="container">
 <h2>Skills & Tools</h2>
@@ -133,16 +153,12 @@ footer{background:#FFF6E0;text-align:center;padding:40px 20px;margin-top:20px}
 </div>
 </section>
 
-<!-- CONTACT - MESSAGE GOES DIRECTLY TO WHATSAPP / EMAIL -->
 <section id="contact">
 <div class="container grid2">
 <div>
 <h2>Let's Work <span>Together.</span></h2>
 <p>Have a project? Website, Design or Data Analysis? Send me a message and I will reply fast.</p><br>
-<p><b>Company:</b> Malgwi Tech<br>
-<b>CEO:</b> Paul David<br>
-<b>Email:</b> paulmalgwi111@gmail.com<br>
-<b>WhatsApp / Call:</b> 08039696838</p><br>
+<p><b>Company:</b> Malgwi Tech<br><b>CEO:</b> Paul David<br><b>Email:</b> paulmalgwi111@gmail.com<br><b>WhatsApp / Call:</b> 08039696838</p><br>
 <a href="https://wa.me/2348039696838?text=Hello%20Malgwi%20Tech,%20I%20want%20to%20discuss%20a%20project" class="btn">Chat on WhatsApp</a>
 <a href="mailto:paulmalgwi111@gmail.com" class="btn btn-light">Send Email</a>
 </div>
@@ -172,7 +188,18 @@ footer{background:#FFF6E0;text-align:center;padding:40px 20px;margin-top:20px}
 <p>© 2026 Malgwi Tech | CEO: Paul David | paulmalgwi111@gmail.com | 08039696838</p>
 </footer>
 
+<a href="https://wa.me/2348039696838" class="whatsapp-float">💬 WhatsApp Me</a>
+
 <script>
+function toggleMenu(){
+var nav = document.getElementById('mainNav');
+nav.classList.toggle('show');
+}
+function closeMenu(){
+if(window.innerWidth <= 750){
+document.getElementById('mainNav').classList.remove('show');
+}
+}
 function sendMessage(e){
 e.preventDefault();
 var name=document.getElementById('name').value;
@@ -188,7 +215,6 @@ var service=document.getElementById('service').value;
 var msg=document.getElementById('message').value;
 window.location.href="mailto:paulmalgwi111@gmail.com?subject=New Project - "+encodeURIComponent(service)+"&body="+encodeURIComponent("Name: "+name+"%0A%0A"+msg);
 }
-// For logo upload - click logo box to change
 document.getElementById('logoBox').onclick=function(){
 var input=document.createElement('input');input.type='file';input.accept='image/*';
 input.onchange=function(e){var url=URL.createObjectURL(e.target.files[0]);document.getElementById('logoBox').innerHTML='<img src="'+url+'">';};
@@ -196,4 +222,4 @@ input.click();
 }
 </script>
 </body>
-</html>
+                                                                                                                                                                         </html>
